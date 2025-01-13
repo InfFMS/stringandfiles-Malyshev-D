@@ -3,3 +3,16 @@
 # Слова во всех предложениях должны быть приведены к верхнему регистру.
 # Между словами вместо пробела ставится символ "_".
 # После записи откройте этот файл, считайте содержимое и выведите его на экран.
+num = int(input())
+text = []
+for i in range(num):
+    x = input()
+    x = x.upper()
+    list = x.split(' ')
+    y = '-'.join(list) + '\n'
+    text.append(y)
+with open('task4.txt', 'w', encoding='utf-8') as f:
+    for s in text:
+        f.write(s)
+with open('task4.txt', encoding='utf-8') as f:
+    print(f.read())
